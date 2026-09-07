@@ -3,7 +3,7 @@
 **Author:** Yu-Fan Lin
 
 ## Description
-This is the course 418Y homework1. Need to build a dynamic web page using HTML, css and javascript to record the tasks and their priority. Provide three functions: Add, Done, Delete.
+This is the course 418Y homework1. I need to build a dynamic web page using HTML, css and javascript to record the tasks and their priority. Provide three functions: Add, Complete, Delete.
 
 
 ## How to Run
@@ -13,7 +13,7 @@ This is the course 418Y homework1. Need to build a dynamic web page using HTML, 
 
 ## Features
 - Type the task name in the input box, choose the priority and click `Add Task` button to add new task.
-- Click `Done` to mark task finished.
+- Click `Complete` to mark task finished.
 - Click `Delete` to delete the task.
 
 ## Known Issues / Unfinished
