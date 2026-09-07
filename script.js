@@ -38,11 +38,11 @@ function renderTasks() {
             li.classList.add("completed");
         }
 
-        // create Done button
+        // create Complete button
         const doneButton = document.createElement("button");
-        doneButton.textContent = "Done";
+        doneButton.textContent = "Complete";
 
-        // add event listener to the Done button
+        // add event listener to the Complete button
         doneButton.addEventListener("click", () => {
             // mark the task as completed
             task.completed = !task.completed;
@@ -66,7 +66,7 @@ function renderTasks() {
         // set new element's text content to the task name
         li.textContent = task.name + " - " + task.priority;
 
-        // append the Done button to the list item
+        // append the Complete button to the list item
         li.appendChild(doneButton);
 
 
