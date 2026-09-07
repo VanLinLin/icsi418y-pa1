@@ -36,7 +36,7 @@ function renderTasks() {
         // add a class to the list element if the task is completed
         if (task.completed) {
             li.classList.add("completed");
-        };
+        }
 
         // create Done button
         const doneButton = document.createElement("button");
@@ -50,14 +50,33 @@ function renderTasks() {
             renderTasks();
         });
 
+
+        // create Delete button
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+
+        // add event listener to the Delete button
+        deleteButton.addEventListener("click", () => {
+            // remove the task from the task array
+            allTasksList.splice(i, 1);
+
+            renderTasks();
+        });
+
         // set new element's text content to the task name
         li.textContent = task.name + " - " + task.priority;
 
         // append the Done button to the list item
         li.appendChild(doneButton);
 
+
+        // append the Delete button to the list item
+        li.appendChild(deleteButton);
+
         taskList.appendChild(li);
 
+
+        
         // show the task list in the console
         // console.log(taskList);
     }
@@ -66,6 +85,9 @@ function renderTasks() {
 
 // select task form
 const taskForm = document.querySelector("#task-form");
+
+// render the tasks when the page loads
+renderTasks();
 
 // listener
 taskForm.addEventListener("submit", (event) => {
